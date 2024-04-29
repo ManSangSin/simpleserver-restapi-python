@@ -16,4 +16,5 @@ def read_item(item_id: int, q: Union[str, None] = None):
 def get_shows():
     api_url = "https://api.tvmaze.com/shows"
     tv_shows_data = requests.get(api_url).json()
-    return tv_shows_data
+    specific_show = tv_shows_data[105]
+    return specific_show
